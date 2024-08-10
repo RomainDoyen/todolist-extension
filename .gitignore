@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.env.local
+.env
+
+# prisma migration
+prisma/migrations
 
 # Editor directories and files
 .vscode/*
