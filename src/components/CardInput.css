@@ -1,0 +1,34 @@
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #B97C7C;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.circle:hover {
+  background-color: #9b6a6a;
+}
+
+.card-input form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #191927;
+  border-bottom: 1px solid #8A8181;
+  flex-shrink: 0; /* Empêche la réduction de la hauteur */
+}
+
+.card-input input {
+  font-size: 1.2em;
+  background-color: #12121C;
+  color: #8A8181;
+  border: 1px solid #8A8181;
+  border-radius: 14px;
+  height: 50px;
+  flex-grow: 1; /* Prend tout l'espace disponible dans la ligne */
+}
