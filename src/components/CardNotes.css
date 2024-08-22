@@ -1,0 +1,49 @@
+.card-notes {
+  background-color: #161621;
+  border-right: 1px solid #8A8181;
+  overflow-y: auto; /* Scroll uniquement si nécessaire */
+  width: 200px; /* Fixe la largeur de la colonne des notes */
+  padding: 1em;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-notes::-webkit-scrollbar {
+  width: 7px;
+}
+
+.card-notes::-webkit-scrollbar-track {
+  background: #2e2e2e;
+  border-radius: 10px;
+}
+
+.card-notes::-webkit-scrollbar-thumb {
+  background: #b97c7c;
+  border-radius: 10px;
+}
+
+.card-notes::-webkit-scrollbar-thumb:hover {
+  background: #9b6a6a;
+}
+
+.todo-item {
+  background-color: #B97C7C;
+  margin-bottom: 30px; 
+  padding: 10px; 
+  border-radius: 14px;
+  cursor: pointer; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.todo-item:hover {
+  background-color: #9b6a6a; 
+}
+
+.todo-item h2 {
+  margin: 0 0 5px 0;
+}
+
+.todo-item p {
+  margin: 0; 
+}
