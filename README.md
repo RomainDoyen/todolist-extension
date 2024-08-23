@@ -10,6 +10,26 @@ This is a simple todolist extension for chrome.
 pnpm install
 ```
 
+# Config .env file with the connection Supabase
+
+```bash
+VITE_SUPABASE_URL=https://<your_supabase_url>.supabase.co
+VITE_SUPABASE_ANON_KEY=<your_supabase_anon_key>
+```
+
+# Prisma 
+
+initial schema
+
+```bash
+npx prisma init
+```
+Run a migration to create your database tables with Prisma Migrate
+
+```bash
+npx prisma migrate dev --name init
+```
+
 # Build and install extension
 
 ## Build extension
