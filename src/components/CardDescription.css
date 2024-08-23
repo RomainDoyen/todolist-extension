@@ -1,0 +1,34 @@
+.card-description {
+  flex-grow: 1; /* Permet à la description d'occuper tout l'espace disponible */
+  overflow-y: auto;
+  padding: 1em;
+  background-color: #12121C;
+}
+
+.card-description::-webkit-scrollbar {
+  width: 7px;
+}
+
+.card-description::-webkit-scrollbar-track {
+  background: #2e2e2e;
+  border-radius: 10px;
+}
+
+.card-description::-webkit-scrollbar-thumb {
+  background: #b97c7c;
+  border-radius: 10px;
+}
+
+.card-description::-webkit-scrollbar-thumb:hover {
+  background: #9b6a6a;
+}
+
+.card-no-description {
+  color: #8A8181; 
+  font-size: 20px; 
+  text-align: center; 
+  padding: 50px;
+  border: 1px solid #8A8181;
+  border-radius: 14px;
+  height: 100%; /* Étend l'élément pour remplir l'espace vertical */
+}
