@@ -23,6 +23,22 @@
   background: #9b6a6a;
 }
 
+.card-item {
+  background-color: #191927;
+  border: 1px solid #8A8181;
+  color: #8A8181;
+  border-radius: 14px;
+  padding: 1em;
+  max-height: 100%; /* Empêche le dépassement de la hauteur maximale */
+  overflow: hidden;
+}
+
+.card-edit-description {
+  margin-top: 1em;
+  max-height: 200px; /* Limite la hauteur de la description */
+  overflow-y: auto;
+}
+
 .card-no-description {
   color: #8A8181; 
   font-size: 20px; 
@@ -31,4 +47,32 @@
   border: 1px solid #8A8181;
   border-radius: 14px;
   height: 100%; /* Étend l'élément pour remplir l'espace vertical */
+}
+
+.card-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-todo, .textarea-todo {
+  width: 100%;
+  background-color: #12121C;
+  color: #8A8181;
+  border: 1px solid #8A8181;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.btn-todo {
+  background-color: #B97C7C;
+  border: none;
+  padding: 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #12121C;
+  margin-top: 10px;
+}
+
+.btn-todo:hover {
+  background-color: #9b6a6a;
 }

@@ -16,3 +16,8 @@ export type CardInputProps = {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
+
+export type CardDescriptionProps = {
+  todo: Todo | null;
+  setSelectedTodo: React.Dispatch<React.SetStateAction<Todo | null>>;
+};

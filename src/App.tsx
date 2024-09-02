@@ -38,7 +38,7 @@ function App(): React.JSX.Element {
       <div className="container">
         <CardNotes todos={todos} setSelectedTodo={setSelectedTodo} />
         {selectedTodo ? (
-          <CardDescription />
+          <CardDescription todo={selectedTodo} setSelectedTodo={setSelectedTodo} />
         ) : (
           <div className="card-description">
             <div className="card-no-description">
