@@ -47,3 +47,18 @@
 .todo-item p {
   margin: 0; 
 }
+
+.todo-no-item {
+  color: #8A8181; 
+  font-size: 20px; 
+  text-align: center; 
+  padding: 50px;
+  border: 1px solid #8A8181;
+  border-radius: 14px;
+  height: 100%; /* Étend l'élément pour remplir l'espace vertical */
+}
+
+.not {
+  color: #8A8181;
+  font-size: 20px;
+}

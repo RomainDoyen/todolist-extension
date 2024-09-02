@@ -2,16 +2,19 @@ import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 import './CardInput.css';
 import { supabase } from '../supabase/client';
+import React from 'react';
+import { CardInputProps } from '../types/types.ts';
+import { PostgrestError } from '@supabase/supabase-js';
 
-export default function CardInput({ todos, setTodos }) {
-  const [title, setTitle] = useState('');
+export default function CardInput({ todos, setTodos }: CardInputProps): React.JSX.Element {
+  const [title, setTitle] = useState<string>('');
 
-  const handleCreate = async (e) => {
+  const handleCreate = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Creating todo with title:', title);
   
     try {
-      const { data, error } = await supabase
+      const { data, error }: { data: null; error: PostgrestError | null } = await supabase
         .from('Todo')
         .insert([{ title, updatedAt: new Date() }]);
   
@@ -21,7 +24,7 @@ export default function CardInput({ todos, setTodos }) {
       }
   
       console.log('Todo created:', data);
-      if (data && data.length > 0) {
+      if (data && (data as any[]).length > 0) {
         setTodos([...todos, data[0]]);
       }
       setTitle('');

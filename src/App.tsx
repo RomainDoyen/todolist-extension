@@ -1,13 +1,15 @@
-import CardInput from './components/CardInput';
-import CardNotes from './components/CardNotes';
-import CardDescription from './components/CardDescription';
+import CardInput from './components/CardInput.tsx';
+import CardNotes from './components/CardNotes.tsx';
+import CardDescription from './components/CardDescription.tsx';
 import { useState, useEffect } from 'react';
 import { supabase } from './supabase/client';
+import React from 'react';
+import { Todo } from './types/types.ts';
 
-function App() {
+function App(): React.JSX.Element {
 
-  const [todos, setTodos] = useState([]);
-  const [selectedTodo, setSelectedTodo] = useState(null);
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [selectedTodo, setSelectedTodo] = useState<Todo | null>(null);
 
   const getTodos = async () => {
     try {
