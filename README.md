@@ -37,7 +37,7 @@ npx prisma migrate dev --name init
 ```bash
 pnpm build-extension
 ```
-## Install extension
+## Install extension in Chrome
 
 1. Open Chrome
 1. Go to `chrome://extensions/`
@@ -46,3 +46,10 @@ pnpm build-extension
 4. Select the `dist` folder
 5. The extension should be installed
 
+## Install extension in Firefox
+
+1. Open Firefox
+2. Go to `about:debugging#/runtime/this-firefox`
+3. Click on `Load Temporary Add-on`
+4. Select the `dist/manifest.json` file
+5. The extension should be installed
