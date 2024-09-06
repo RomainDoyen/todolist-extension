@@ -1,16 +1,16 @@
+import { PostgrestError } from '@supabase/supabase-js';
 import { CSSProperties, useEffect, useState } from 'react';
 import { FaRegTrashAlt } from "react-icons/fa";
 import { IoSaveOutline } from "react-icons/io5";
 import { LuPencil } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
-import { supabase } from '../../supabase/client.ts';
-import './CardDescription.css';
-import { PostgrestError } from '@supabase/supabase-js';
 import BeatLoader from "react-spinners/BeatLoader";
-import { CardDescriptionProps, Todo } from '../../types/types.ts';
-import Input from '../ui/Input.tsx';
+import { supabase } from '../../supabase/client.ts';
+import { CardDescriptionProps, Todo } from '../../types/todoTypes.ts';
 import Button from '../ui/Button.tsx';
+import Input from '../ui/Input.tsx';
 import Textarea from '../ui/Textarea.tsx';
+import './CardDescription.css';
 
 const override: CSSProperties = {
   display: "block",

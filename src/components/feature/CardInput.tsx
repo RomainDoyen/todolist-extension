@@ -2,10 +2,10 @@ import { PostgrestError } from '@supabase/supabase-js';
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa6';
 import { supabase } from '../../supabase/client.ts';
-import { CardInputProps } from '../../types/types.ts';
-import './CardInput.css';
-import Input from '../ui/Input.tsx';
+import { CardInputProps } from '../../types/todoTypes.ts';
 import Button from '../ui/Button.tsx';
+import Input from '../ui/Input.tsx';
+import './CardInput.css';
 
 export default function CardInput({ todos, setTodos }: CardInputProps): React.JSX.Element {
   const [title, setTitle] = useState<string>('');

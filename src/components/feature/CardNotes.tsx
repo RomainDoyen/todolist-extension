@@ -1,8 +1,8 @@
 import React from 'react';
-import './CardNotes.css';
 import { FaStickyNote } from "react-icons/fa";
-import { CardNotesProps } from '../../types/types';
+import { CardNotesProps } from '../../types/todoTypes';
 import Div from '../ui/Div';
+import './CardNotes.css';
 
 export default function CardNotes({ todos, setSelectedTodo }: CardNotesProps): React.JSX.Element {
   return (

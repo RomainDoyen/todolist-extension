@@ -3,7 +3,7 @@ import CardDescription from './components/feature/CardDescription.tsx';
 import CardInput from './components/feature/CardInput.tsx';
 import CardNotes from './components/feature/CardNotes.tsx';
 import { supabase } from './supabase/client';
-import { Todo } from './types/types.ts';
+import { Todo } from './types/todoTypes.ts';
 
 function App(): React.JSX.Element {
 
