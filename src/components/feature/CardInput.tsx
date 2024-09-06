@@ -4,6 +4,7 @@ import { FaPlus } from 'react-icons/fa6';
 import { supabase } from '../../supabase/client.ts';
 import { CardInputProps } from '../../types/types.ts';
 import './CardInput.css';
+import Input from '../ui/Input.tsx';
 
 export default function CardInput({ todos, setTodos }: CardInputProps): React.JSX.Element {
   const [title, setTitle] = useState<string>('');
@@ -35,12 +36,11 @@ export default function CardInput({ todos, setTodos }: CardInputProps): React.JS
   return (
     <div className='card-input'>
       <form onSubmit={handleCreate}>
-        <input
+        <Input 
           type="text"
-          value={title}
+          title={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder='Insérer une nouvelle note...'
-          required
         />
         <button className='circle' type="submit">
           <FaPlus size={35} color='black' />
