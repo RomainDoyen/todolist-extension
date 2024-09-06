@@ -5,6 +5,7 @@ import { supabase } from '../../supabase/client.ts';
 import { CardInputProps } from '../../types/types.ts';
 import './CardInput.css';
 import Input from '../ui/Input.tsx';
+import Button from '../ui/Button.tsx';
 
 export default function CardInput({ todos, setTodos }: CardInputProps): React.JSX.Element {
   const [title, setTitle] = useState<string>('');
@@ -42,9 +43,11 @@ export default function CardInput({ todos, setTodos }: CardInputProps): React.JS
           onChange={(e) => setTitle(e.target.value)}
           placeholder='Insérer une nouvelle note...'
         />
-        <button className='circle' type="submit">
-          <FaPlus size={35} color='black' />
-        </button>
+        <Button 
+          className='circle'
+          type='submit'
+          icon={<FaPlus size={35} color='black' />}
+        />
       </form>
     </div>
   );

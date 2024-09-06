@@ -9,6 +9,7 @@ import { PostgrestError } from '@supabase/supabase-js';
 import BeatLoader from "react-spinners/BeatLoader";
 import { CardDescriptionProps, Todo } from '../../types/types.ts';
 import Input from '../ui/Input.tsx';
+import Button from '../ui/Button.tsx';
 
 const override: CSSProperties = {
   display: "block",
@@ -116,22 +117,34 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
                   onChange={(e) => setUpdatedTitle(e.target.value)}
                   className='input-todo'
                 />
-                <button className='btn-todo' onClick={() => updateTodo(todoDetails.id, { ...todoDetails, title: updatedTitle, description: updatedDescription })}>
-                  <IoSaveOutline /> Enregistrer
-                </button>
-                <button className='btn-todo' onClick={() => setIsEditing(false)}>
-                  <MdOutlineCancel /> Annuler
-                </button>
+                <Button 
+                  className='btn-todo'
+                  text='Enregistrer'
+                  onClick={() => updateTodo(todoDetails.id, { ...todoDetails, title: updatedTitle, description: updatedDescription })}
+                  icon={<IoSaveOutline />}
+                />
+                <Button 
+                  className='btn-todo'
+                  text='Annuler'
+                  onClick={() => setIsEditing(false)}
+                  icon={<MdOutlineCancel />}
+                />
               </>
             ) : (
               <>
                 <h2>{todoDetails.title}</h2>
-                <button className='btn-todo' onClick={() => setIsEditing(true)}>
-                  <LuPencil /> Modifier
-                </button>
-                <button className='btn-todo' onClick={() => deleteTodo(todoDetails.id)}>
-                  <FaRegTrashAlt /> Supprimer
-                </button>
+                <Button 
+                  className='btn-todo'
+                  text='Modifier'
+                  onClick={() => setIsEditing(true)}
+                  icon={<LuPencil />}
+                />
+                <Button 
+                  className='btn-todo'
+                  text='Supprimer'
+                  onClick={() => deleteTodo(todoDetails.id)}
+                  icon={<FaRegTrashAlt />}
+                />
               </>
             )}
           </div>
