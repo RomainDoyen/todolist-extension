@@ -1,9 +1,4 @@
-type TextareaProps = {
-  value: string;
-  className: string;
-  placeholder: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-}
+import { TextareaProps } from "../../types/uiTypes"
 
 export default function Textarea({ value, className, placeholder, onChange }: TextareaProps): React.JSX.Element {
   return (

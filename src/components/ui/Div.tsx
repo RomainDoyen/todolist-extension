@@ -1,10 +1,4 @@
-type DivProps = {
-  key?: number;
-  setSelectedTodo?: () => void;
-  title?: string | JSX.Element;
-  description: string | JSX.Element;
-  className: string;
-};
+import { DivProps } from "../../types/uiTypes"
 
 export default function Div({ key, setSelectedTodo, title, description, className }: DivProps): JSX.Element {
   return (

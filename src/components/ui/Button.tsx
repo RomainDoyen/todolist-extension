@@ -1,10 +1,4 @@
-type ButtonProps = {
-  type?: "submit" | "reset" | "button" | undefined;
-  text?: string;
-  onClick?: () => void;
-  className?: string;
-  icon?: JSX.Element;
-}
+import { ButtonProps } from "../../types/uiTypes"
 
 export default function Button({ type, text, onClick, className, icon }: ButtonProps): React.JSX.Element {
   return (
