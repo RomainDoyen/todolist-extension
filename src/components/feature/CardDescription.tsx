@@ -1,14 +1,14 @@
-import { useEffect, useState, CSSProperties } from 'react';
-import { LuPencil } from "react-icons/lu";
+import { CSSProperties, useEffect, useState } from 'react';
 import { FaRegTrashAlt } from "react-icons/fa";
 import { IoSaveOutline } from "react-icons/io5";
+import { LuPencil } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
+import { supabase } from '../../supabase/client.ts';
 import './CardDescription.css';
-import { supabase } from '../supabase/client';
 // import ClipLoader from "react-spinners/ClipLoader";
-import BeatLoader from "react-spinners/BeatLoader";
 import { PostgrestError } from '@supabase/supabase-js';
-import { Todo, CardDescriptionProps } from '../types/types.ts';
+import BeatLoader from "react-spinners/BeatLoader";
+import { CardDescriptionProps, Todo } from '../../types/types.ts';
 
 const override: CSSProperties = {
   display: "block",

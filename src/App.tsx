@@ -1,9 +1,8 @@
-import CardInput from './components/CardInput.tsx';
-import CardNotes from './components/CardNotes.tsx';
-import CardDescription from './components/CardDescription.tsx';
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import CardDescription from './components/feature/CardDescription.tsx';
+import CardInput from './components/feature/CardInput.tsx';
+import CardNotes from './components/feature/CardNotes.tsx';
 import { supabase } from './supabase/client';
-import React from 'react';
 import { Todo } from './types/types.ts';
 
 function App(): React.JSX.Element {

@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { FaPlus } from 'react-icons/fa6';
-import './CardInput.css';
-import { supabase } from '../supabase/client';
-import React from 'react';
-import { CardInputProps } from '../types/types.ts';
 import { PostgrestError } from '@supabase/supabase-js';
+import React, { useState } from 'react';
+import { FaPlus } from 'react-icons/fa6';
+import { supabase } from '../../supabase/client.ts';
+import { CardInputProps } from '../../types/types.ts';
+import './CardInput.css';
 
 export default function CardInput({ todos, setTodos }: CardInputProps): React.JSX.Element {
   const [title, setTitle] = useState<string>('');
