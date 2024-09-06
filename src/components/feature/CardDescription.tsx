@@ -5,10 +5,10 @@ import { LuPencil } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
 import { supabase } from '../../supabase/client.ts';
 import './CardDescription.css';
-// import ClipLoader from "react-spinners/ClipLoader";
 import { PostgrestError } from '@supabase/supabase-js';
 import BeatLoader from "react-spinners/BeatLoader";
 import { CardDescriptionProps, Todo } from '../../types/types.ts';
+import Input from '../ui/Input.tsx';
 
 const override: CSSProperties = {
   display: "block",
@@ -94,15 +94,6 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
     <div className="card-description">
       {todoDetails === null ? (
         <div className="sweet-loading">
-    
-          {/* <ClipLoader
-            color={color}
-            loading={loading}
-            cssOverride={override}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          /> */}
           <BeatLoader 
             color={color}
             loading={loading}
@@ -119,11 +110,11 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
           <div className='card-infos'>
             {isEditing ? (
               <>
-                <input
+                <Input 
                   type="text"
-                  className='input-todo'
-                  value={updatedTitle}
+                  title={updatedTitle}
                   onChange={(e) => setUpdatedTitle(e.target.value)}
+                  className='input-todo'
                 />
                 <button className='btn-todo' onClick={() => updateTodo(todoDetails.id, { ...todoDetails, title: updatedTitle, description: updatedDescription })}>
                   <IoSaveOutline /> Enregistrer
