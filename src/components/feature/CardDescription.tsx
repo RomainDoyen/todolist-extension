@@ -10,6 +10,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 import { CardDescriptionProps, Todo } from '../../types/types.ts';
 import Input from '../ui/Input.tsx';
 import Button from '../ui/Button.tsx';
+import Textarea from '../ui/Textarea.tsx';
 
 const override: CSSProperties = {
   display: "block",
@@ -150,7 +151,7 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
           </div>
           <div className="card-edit-description">
             {isEditing ? (
-              <textarea
+              <Textarea
                 value={updatedDescription}
                 className='textarea-todo'
                 placeholder='Ajouter une description...'
