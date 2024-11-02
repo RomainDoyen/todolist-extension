@@ -1,5 +1,7 @@
 # Todolist Extension
 
+<img src="./public/icon48.png" alt="todolist extension icon" width="45" height="34">
+
 ## Description
 
 This is a simple todolist extension for chrome.
