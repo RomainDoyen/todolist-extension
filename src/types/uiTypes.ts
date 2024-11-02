@@ -18,7 +18,7 @@ export type DivProps = {
   key?: number;
   setSelectedTodo?: () => void;
   title?: string | JSX.Element;
-  description: string | JSX.Element;
+  description?: string | JSX.Element;
   className: string;
 };
 

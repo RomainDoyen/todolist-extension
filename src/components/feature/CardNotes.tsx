@@ -13,7 +13,6 @@ export default function CardNotes({ todos, setSelectedTodo }: CardNotesProps): R
           key={todo.id} 
           setSelectedTodo={() => setSelectedTodo(todo)} 
           title={<h3><FaStickyNote />&nbsp;{todo.title}</h3>} 
-          description={<p>{todo.description}</p>} 
           className="todo-item"
         />
       ))) : (
