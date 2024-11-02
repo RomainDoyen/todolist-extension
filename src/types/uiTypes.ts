@@ -10,6 +10,7 @@ export type TextareaProps = {
   value: string;
   className: string;
   placeholder: string;
+  rows: number;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 

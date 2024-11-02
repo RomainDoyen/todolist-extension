@@ -110,56 +110,64 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
       ) : (
         <div className="card-item">
           <div className='card-infos'>
-            {isEditing ? (
-              <>
+            <div className="card-title">
+              {isEditing ? (
                 <Input 
                   type="text"
                   title={updatedTitle}
                   onChange={(e) => setUpdatedTitle(e.target.value)}
                   className='input-todo'
                 />
-                <Button 
-                  className='btn-todo'
-                  text='Enregistrer'
-                  onClick={() => updateTodo(todoDetails.id, { ...todoDetails, title: updatedTitle, description: updatedDescription })}
-                  icon={<IoSaveOutline />}
-                />
-                <Button 
-                  className='btn-todo'
-                  text='Annuler'
-                  onClick={() => setIsEditing(false)}
-                  icon={<MdOutlineCancel />}
-                />
-              </>
-            ) : (
-              <>
+              ) : (
                 <h2>{todoDetails.title}</h2>
-                <Button 
-                  className='btn-todo'
-                  text='Modifier'
-                  onClick={() => setIsEditing(true)}
-                  icon={<LuPencil />}
+              )}
+            </div>
+            <div className="card-edit-description">
+              {isEditing ? (
+                <Textarea
+                  value={updatedDescription}
+                  className='textarea-todo'
+                  placeholder='Ajouter une description...'
+                  onChange={(e) => setUpdatedDescription(e.target.value)}
+                  rows={11}
                 />
-                <Button 
-                  className='btn-todo'
-                  text='Supprimer'
-                  onClick={() => deleteTodo(todoDetails.id)}
-                  icon={<FaRegTrashAlt />}
-                />
-              </>
-            )}
-          </div>
-          <div className="card-edit-description">
-            {isEditing ? (
-              <Textarea
-                value={updatedDescription}
-                className='textarea-todo'
-                placeholder='Ajouter une description...'
-                onChange={(e) => setUpdatedDescription(e.target.value)}
-              />
-            ) : (
-              <p>{todoDetails.description}</p>
-            )}
+              ) : (
+                <p>{todoDetails.description}</p>
+              )}
+            </div>
+            <div className="card-btn">
+              {isEditing ? (
+                <>
+                  <Button 
+                    className='btn-todo'
+                    text='Enregistrer'
+                    onClick={() => updateTodo(todoDetails.id, { ...todoDetails, title: updatedTitle, description: updatedDescription })}
+                    icon={<IoSaveOutline />}
+                  />
+                  <Button 
+                    className='btn-todo'
+                    text='Annuler'
+                    onClick={() => setIsEditing(false)}
+                    icon={<MdOutlineCancel />}
+                  />
+                </>
+              ) : (
+                <>
+                  <Button 
+                    className='btn-todo'
+                    text='Modifier'
+                    onClick={() => setIsEditing(true)}
+                    icon={<LuPencil />}
+                  />
+                  <Button 
+                    className='btn-todo'
+                    text='Supprimer'
+                    onClick={() => deleteTodo(todoDetails.id)}
+                    icon={<FaRegTrashAlt />}
+                  />
+                </>
+              )}
+            </div>
           </div>
         </div>
       )}
