@@ -4,7 +4,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { IoSaveOutline } from "react-icons/io5";
 import { LuPencil } from "react-icons/lu";
 import { MdOutlineCancel } from "react-icons/md";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { supabase } from '../../supabase/client.ts';
 import { CardDescriptionProps, Todo } from '../../types/todoTypes.ts';
 import Button from '../ui/Button.tsx';
@@ -96,12 +96,11 @@ export default function CardDescription({ todo, setSelectedTodo }: CardDescripti
     <div className="card-description">
       {todoDetails === null ? (
         <div className="sweet-loading">
-          <BeatLoader 
+          <ClipLoader 
             color={color}
             loading={loading}
             cssOverride={override}
-            size={20}
-            margin={10}
+            size={35}
             speedMultiplier={0.5}
             aria-label="Loading Spinner"
             data-testid="loader"

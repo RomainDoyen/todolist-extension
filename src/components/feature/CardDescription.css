@@ -92,3 +92,10 @@
 .btn-todo:hover {
   background-color: #9b6a6a;
 }
+
+.sweet-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
